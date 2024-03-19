@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ES5
+        function somaV1(a,b){
+            return ("Soma:"+(a+b));
+
+        }
+        //ou
+        var somaV2 = function(a,b){
+            return("Soma:"+(a+b));
+        }
+        //ES6
+        const somaV3 = (a,b) => {
+            return ("Soma:"+(a+b))
+        };
+    </script>
+</head>
+<body>
+    <h2>exemplos com funções</h2>
+    <script>
+        console.log(somaV1(5,5));
+        console.log(somaV2(10,20));
+        console.log(somaV3(130,230));
+    </script>
+</body>
+</html>

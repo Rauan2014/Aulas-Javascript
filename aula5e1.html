@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 6 - javascript - Introdução</title>
+    <script>
+        function calculo() {
+            var Nota1 = parseFloat(document.getElementById('nota1').value);
+
+            var Nota2 = parseFloat(document.getElementById('nota2').value);
+
+            var Nota3 = parseFloat(document.getElementById('nota3').value);
+
+            var Nota4 = parseFloat(document.getElementById('nota4').value);
+
+            var Media = (Nota1 + Nota2 + Nota3 + Nota4)/4
+            if (Media > 6){
+            document.getElementById('media').setAttribute("value", (Nota1 + Nota2 + Nota3 + Nota4) / 4)
+            document.getElementById('aviso').innerHTML = "Você Passou!!"}
+            else {
+                document.getElementById('aviso').innerHTML = "Nota(s) Inválida(s)"
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <p>
+            <label for="nota1">Nota 1: </label><input type="number" id="nota1" value="" max="10" autofocus>
+        </p>
+        <p>
+            <label for="npta2">Nota 2:</label><input input type="number" id="nota2" value="" max="10">
+        </p>
+        <p>
+            <label for="nota3">Nota 3: </label><input input type="number" id="nota3" value="" max="10">
+        </p>
+        <p>
+            <label for="nota4">Nota 4:</label><input input type="number" id="nota4" value="" max="10">
+        </p>
+        <p>
+            <input type="button" onclick="javascript:calculo()" value="Calcular media">
+            <input type="number" id="media" value="" readonly>
+            <h2 id="aviso"></h2>
+
+        </p>
+        <p>
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+</body>
+
+</html>
